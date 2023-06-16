@@ -11,11 +11,11 @@
 int main(void)
 {
 	int n;
+	char *message;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-	char *message[];
 
 	if (n % 2 == 0)
 	{
