@@ -19,7 +19,7 @@ int main(void)
 					int num1 = tens1 * 10 + ones1;
 					int num2 = tens2 * 10 + ones2;
 
-					if (num1 <= num2)
+					if (num1 <= num2 && !(num1 == 0 && num2 == 0))
 					{
 						putchar('0' + tens1);
 						putchar('0' + ones1);
