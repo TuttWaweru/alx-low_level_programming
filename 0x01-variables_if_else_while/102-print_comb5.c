@@ -27,7 +27,7 @@ int main(void)
 						putchar('0' + tens2);
 						putchar('0' + ones2);
 
-						if (num1 != 99 || num2 != 99)
+						if (num1 != 98 && num2 != 99)
 						{
 							putchar(',');
 							putchar(' ');
