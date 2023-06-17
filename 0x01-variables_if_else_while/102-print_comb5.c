@@ -1,11 +1,15 @@
 #include <stdio.h>
-
-int main(void) 
+/**
+ * main - Entry
+ * Return: Always 0 (Success)
+ *
+ */
+int main(void)
 {
 	int tens1, ones1, tens2, ones2;
 
 	for (tens1 = 0; tens1 < 10; tens1++)
- 	{
+	{
 		for (ones1 = 0; ones1 < 10; ones1++)
 		{
 			for (tens2 = 0; tens2 < 10; tens2++)
@@ -36,6 +40,6 @@ int main(void)
 
 	putchar('\n');
 
-	return 0;
+	return (0);
 }
 
