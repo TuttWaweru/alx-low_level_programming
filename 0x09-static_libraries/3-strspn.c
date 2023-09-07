@@ -1,29 +1,39 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
- * _strspn - Entry point
- * @s: input
- * @accept: input
- * Return: Always 0 (Success)
+ * _strspn - function that gets the length of a prefix substring
+ *
+ * @s: parameter defined in main, pointer to memory (string)
+ * @accept: parameter defined in main, characters to be compared with s string
+ *
+ * Return: integer, number of bytes common to the two strings
  */
+
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int n = 0;
-	int r;
+	int size = 0;
+	unsigned int bytes = 0;
+	char *tmp = accept;
+	int i;
+
+	while (*accept++)
+		size++;
+	accept = tmp;
 
 	while (*s)
 	{
-		for (r = 0; accept[r]; r++)
+		accept = tmp;
+		i = 0;
+		while (accept < tmp + size)
 		{
-			if (*s == accept[r])
-			{
-				n++;
-				break;
-			}
-			else if (accept[r + 1] == '\0')
-				return (n);
+			if (*s == *accept)
+				bytes++, i++;
+			accept++;
 		}
+		if (i == 0)
+			break;
 		s++;
 	}
-	return (n);
+	return (bytes);
 }
-
